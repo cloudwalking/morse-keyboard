@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DA0942B814D37DBF00D814B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0942B714D37DBF00D814B9 /* AppDelegate.m */; };
+		DA0942CB14D37E1100D814B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0942CA14D37E1100D814B9 /* main.m */; };
+		DA0E4EF914F59BDA00932B0F /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0E4EF814F59BDA00932B0F /* button@2x.png */; };
+		DA56DE4D14F55036004C2C35 /* paper.png in Resources */ = {isa = PBXBuildFile; fileRef = DA56DE4C14F55036004C2C35 /* paper.png */; };
+		DA56DE5014F551A8004C2C35 /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = DA56DE4F14F551A8004C2C35 /* button.png */; };
+		DA56DE5414F558E7004C2C35 /* Morse.m in Sources */ = {isa = PBXBuildFile; fileRef = DA56DE5314F558E7004C2C35 /* Morse.m */; };
+		DA62D1D61524CFCF00EAB78C /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA62D1D01524CFCF00EAB78C /* navbar@2x.png */; };
+		DA62D1D71524CFCF00EAB78C /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = DA62D1D11524CFCF00EAB78C /* navbar.png */; };
+		DA62D1D81524CFCF00EAB78C /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA62D1D21524CFCF00EAB78C /* settings@2x.png */; };
+		DA62D1D91524CFCF00EAB78C /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = DA62D1D31524CFCF00EAB78C /* settings.png */; };
+		DA62D1DA1524CFCF00EAB78C /* toolbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA62D1D41524CFCF00EAB78C /* toolbar@2x.png */; };
+		DA62D1DB1524CFCF00EAB78C /* toolbar.png in Resources */ = {isa = PBXBuildFile; fileRef = DA62D1D51524CFCF00EAB78C /* toolbar.png */; };
+		DA62D1DD1524DB2400EAB78C /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA62D1DC1524DB2400EAB78C /* Icon-72@2x.png */; };
+		DA6EE8F914F59ECC00AC668C /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6EE8F714F59ECC00AC668C /* Default-Landscape~ipad.png */; };
+		DA6EE8FA14F59ECC00AC668C /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6EE8F814F59ECC00AC668C /* Default-Portrait~ipad.png */; };
+		DA6F28D414E1DE6F00883BDF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6F28D214E1DE6F00883BDF /* Default@2x.png */; };
+		DA6F28D614E1DE6F00883BDF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6F28D314E1DE6F00883BDF /* Default.png */; };
+		DA858D3814F484A800FF55E7 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA858D3314F484A800FF55E7 /* NavigationController.m */; };
+		DA858D3A14F484A800FF55E7 /* UI.m in Sources */ = {isa = PBXBuildFile; fileRef = DA858D3514F484A800FF55E7 /* UI.m */; };
+		DA858D4014F4855B00FF55E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA858D3E14F4855B00FF55E7 /* Foundation.framework */; };
+		DA858D4114F4855B00FF55E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA858D3F14F4855B00FF55E7 /* UIKit.framework */; };
+		DA858D4314F4857700FF55E7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA858D4214F4857700FF55E7 /* CoreGraphics.framework */; };
+		DA858D4614F4867600FF55E7 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA858D4514F4867600FF55E7 /* MainViewController.m */; };
+		DA858D9314F4870D00FF55E7 /* back_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = DA858D8714F4870D00FF55E7 /* back_normal.png */; };
+		DA858D9514F4870D00FF55E7 /* back_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA858D8814F4870D00FF55E7 /* back_normal@2x.png */; };
+		DA858D9714F4870D00FF55E7 /* back_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = DA858D8914F4870D00FF55E7 /* back_pressed.png */; };
+		DA858D9914F4870D00FF55E7 /* back_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA858D8A14F4870D00FF55E7 /* back_pressed@2x.png */; };
+		DA858D9B14F4870D00FF55E7 /* standard_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = DA858D8B14F4870D00FF55E7 /* standard_normal.png */; };
+		DA858D9D14F4870D00FF55E7 /* standard_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA858D8C14F4870D00FF55E7 /* standard_normal@2x.png */; };
+		DA858D9F14F4870D00FF55E7 /* standard_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = DA858D8D14F4870D00FF55E7 /* standard_pressed.png */; };
+		DA858DA114F4870D00FF55E7 /* standard_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA858D8E14F4870D00FF55E7 /* standard_pressed@2x.png */; };
+		DA858DA314F4870D00FF55E7 /* webview-back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA858D8F14F4870D00FF55E7 /* webview-back@2x.png */; };
+		DA858DA514F4870D00FF55E7 /* webview-back.png in Resources */ = {isa = PBXBuildFile; fileRef = DA858D9014F4870D00FF55E7 /* webview-back.png */; };
+		DA858DA714F4870D00FF55E7 /* webview-forward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA858D9114F4870D00FF55E7 /* webview-forward@2x.png */; };
+		DA858DA914F4870D00FF55E7 /* webview-forward.png in Resources */ = {isa = PBXBuildFile; fileRef = DA858D9214F4870D00FF55E7 /* webview-forward.png */; };
+		DACF8B1714EC60C500B8DF89 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACF8B1014EC60C500B8DF89 /* Icon@2x.png */; };
+		DACF8B1914EC60C500B8DF89 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = DACF8B1114EC60C500B8DF89 /* Icon-72.png */; };
+		DACF8B1B14EC60C500B8DF89 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DACF8B1214EC60C500B8DF89 /* Icon-Small@2x.png */; };
+		DACF8B1D14EC60C500B8DF89 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = DACF8B1314EC60C500B8DF89 /* Icon-Small-50.png */; };
+		DACF8B1F14EC60C500B8DF89 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = DACF8B1414EC60C500B8DF89 /* Icon-Small.png */; };
+		DACF8B2114EC60C500B8DF89 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DACF8B1514EC60C500B8DF89 /* Icon.png */; };
+		DACF8B2314EC60C500B8DF89 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = DACF8B1614EC60C500B8DF89 /* iTunesArtwork.png */; };
+		DADEE09D14F6D3B900873452 /* MorseDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = DADEE09C14F6D3B900873452 /* MorseDemo.m */; };
+		DADEE10414F6E6CB00873452 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DADEE10314F6E6CB00873452 /* MessageUI.framework */; };
+		DADEE10714F6E88300873452 /* send@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DADEE10514F6E88300873452 /* send@2x.png */; };
+		DADEE10814F6E88300873452 /* send.png in Resources */ = {isa = PBXBuildFile; fileRef = DADEE10614F6E88300873452 /* send.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		DA09429B14D37D3400D814B9 /* MorseKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MorseKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA0942B614D37DBF00D814B9 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		DA0942B714D37DBF00D814B9 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		DA0942C314D37DE900D814B9 /* MorseKeyboard-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MorseKeyboard-Info.plist"; sourceTree = "<group>"; };
+		DA0942CA14D37E1100D814B9 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+		DA0942D814D37EA600D814B9 /* MorseKeyboard.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = MorseKeyboard.xcconfig; sourceTree = "<group>"; };
+		DA0E4EF814F59BDA00932B0F /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button@2x.png"; path = "Images/button@2x.png"; sourceTree = SOURCE_ROOT; };
+		DA2425CF14D38D4800D03929 /* MorseKeyboard-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MorseKeyboard-Prefix.pch"; sourceTree = "<group>"; };
+		DA56DE4C14F55036004C2C35 /* paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = paper.png; path = Images/paper.png; sourceTree = SOURCE_ROOT; };
+		DA56DE4F14F551A8004C2C35 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = button.png; path = Images/button.png; sourceTree = SOURCE_ROOT; };
+		DA56DE5214F558E7004C2C35 /* Morse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Morse.h; path = Classes/Objects/Morse.h; sourceTree = SOURCE_ROOT; };
+		DA56DE5314F558E7004C2C35 /* Morse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Morse.m; path = Classes/Objects/Morse.m; sourceTree = SOURCE_ROOT; };
+		DA62D1D01524CFCF00EAB78C /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar@2x.png"; path = "Images/navbar@2x.png"; sourceTree = SOURCE_ROOT; };
+		DA62D1D11524CFCF00EAB78C /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navbar.png; path = Images/navbar.png; sourceTree = SOURCE_ROOT; };
+		DA62D1D21524CFCF00EAB78C /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings@2x.png"; path = "Images/settings@2x.png"; sourceTree = SOURCE_ROOT; };
+		DA62D1D31524CFCF00EAB78C /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = Images/settings.png; sourceTree = SOURCE_ROOT; };
+		DA62D1D41524CFCF00EAB78C /* toolbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "toolbar@2x.png"; path = "Images/toolbar@2x.png"; sourceTree = SOURCE_ROOT; };
+		DA62D1D51524CFCF00EAB78C /* toolbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = toolbar.png; path = Images/toolbar.png; sourceTree = SOURCE_ROOT; };
+		DA62D1DC1524DB2400EAB78C /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		DA6EE8F714F59ECC00AC668C /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		DA6EE8F814F59ECC00AC668C /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		DA6F28D214E1DE6F00883BDF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DA6F28D314E1DE6F00883BDF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DA858D3214F484A800FF55E7 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		DA858D3314F484A800FF55E7 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
+		DA858D3414F484A800FF55E7 /* UI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UI.h; sourceTree = "<group>"; };
+		DA858D3514F484A800FF55E7 /* UI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UI.m; sourceTree = "<group>"; };
+		DA858D3E14F4855B00FF55E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DA858D3F14F4855B00FF55E7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		DA858D4214F4857700FF55E7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		DA858D4414F4867600FF55E7 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = SOURCE_ROOT; };
+		DA858D4514F4867600FF55E7 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/MainViewController.m; sourceTree = SOURCE_ROOT; };
+		DA858D8714F4870D00FF55E7 /* back_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_normal.png; sourceTree = "<group>"; };
+		DA858D8814F4870D00FF55E7 /* back_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_normal@2x.png"; sourceTree = "<group>"; };
+		DA858D8914F4870D00FF55E7 /* back_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_pressed.png; sourceTree = "<group>"; };
+		DA858D8A14F4870D00FF55E7 /* back_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_pressed@2x.png"; sourceTree = "<group>"; };
+		DA858D8B14F4870D00FF55E7 /* standard_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = standard_normal.png; sourceTree = "<group>"; };
+		DA858D8C14F4870D00FF55E7 /* standard_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "standard_normal@2x.png"; sourceTree = "<group>"; };
+		DA858D8D14F4870D00FF55E7 /* standard_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = standard_pressed.png; sourceTree = "<group>"; };
+		DA858D8E14F4870D00FF55E7 /* standard_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "standard_pressed@2x.png"; sourceTree = "<group>"; };
+		DA858D8F14F4870D00FF55E7 /* webview-back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "webview-back@2x.png"; path = "Images/webview-back@2x.png"; sourceTree = SOURCE_ROOT; };
+		DA858D9014F4870D00FF55E7 /* webview-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "webview-back.png"; path = "Images/webview-back.png"; sourceTree = SOURCE_ROOT; };
+		DA858D9114F4870D00FF55E7 /* webview-forward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "webview-forward@2x.png"; path = "Images/webview-forward@2x.png"; sourceTree = SOURCE_ROOT; };
+		DA858D9214F4870D00FF55E7 /* webview-forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "webview-forward.png"; path = "Images/webview-forward.png"; sourceTree = SOURCE_ROOT; };
+		DACF8B1014EC60C500B8DF89 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		DACF8B1114EC60C500B8DF89 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		DACF8B1214EC60C500B8DF89 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		DACF8B1314EC60C500B8DF89 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		DACF8B1414EC60C500B8DF89 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		DACF8B1514EC60C500B8DF89 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		DACF8B1614EC60C500B8DF89 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		DADEE09B14F6D3B900873452 /* MorseDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MorseDemo.h; path = Classes/Objects/MorseDemo.h; sourceTree = SOURCE_ROOT; };
+		DADEE09C14F6D3B900873452 /* MorseDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MorseDemo.m; path = Classes/Objects/MorseDemo.m; sourceTree = SOURCE_ROOT; };
+		DADEE10314F6E6CB00873452 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		DADEE10514F6E88300873452 /* send@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "send@2x.png"; path = "Images/send@2x.png"; sourceTree = SOURCE_ROOT; };
+		DADEE10614F6E88300873452 /* send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = send.png; path = Images/send.png; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA09429814D37D3400D814B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DADEE10414F6E6CB00873452 /* MessageUI.framework in Frameworks */,
+				DA858D4314F4857700FF55E7 /* CoreGraphics.framework in Frameworks */,
+				DA858D4014F4855B00FF55E7 /* Foundation.framework in Frameworks */,
+				DA858D4114F4855B00FF55E7 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DA09429014D37D3400D814B9 = {
+			isa = PBXGroup;
+			children = (
+				DA0942D514D37EA600D814B9 /* Configuration */,
+				DA0942A514D37D3400D814B9 /* Classes */,
+				DA0942C214D37DE900D814B9 /* Resources */,
+				DA0942C914D37E0600D814B9 /* Supporting Files */,
+				DA09429E14D37D3400D814B9 /* Frameworks */,
+				DA09429C14D37D3400D814B9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DA09429C14D37D3400D814B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA09429B14D37D3400D814B9 /* MorseKeyboard.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA09429E14D37D3400D814B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DADEE10314F6E6CB00873452 /* MessageUI.framework */,
+				DA858D4214F4857700FF55E7 /* CoreGraphics.framework */,
+				DA858D3E14F4855B00FF55E7 /* Foundation.framework */,
+				DA858D3F14F4855B00FF55E7 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA0942A514D37D3400D814B9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DA858D3114F484A800FF55E7 /* Components */,
+				DA56DE5114F5583D004C2C35 /* Objects */,
+				DA858D4414F4867600FF55E7 /* MainViewController.h */,
+				DA858D4514F4867600FF55E7 /* MainViewController.m */,
+				DA0942B614D37DBF00D814B9 /* AppDelegate.h */,
+				DA0942B714D37DBF00D814B9 /* AppDelegate.m */,
+			);
+			name = Classes;
+			path = MorseKeyboard;
+			sourceTree = "<group>";
+		};
+		DA0942C214D37DE900D814B9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA62D24A15250CAE00EAB78C /* Icon */,
+				DA858D4814F486DD00FF55E7 /* Images */,
+				DA0942C314D37DE900D814B9 /* MorseKeyboard-Info.plist */,
+				DA2425CF14D38D4800D03929 /* MorseKeyboard-Prefix.pch */,
+				DA6F28D214E1DE6F00883BDF /* Default@2x.png */,
+				DA6F28D314E1DE6F00883BDF /* Default.png */,
+				DA6EE8F714F59ECC00AC668C /* Default-Landscape~ipad.png */,
+				DA6EE8F814F59ECC00AC668C /* Default-Portrait~ipad.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DA0942C914D37E0600D814B9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA0942CA14D37E1100D814B9 /* main.m */,
+			);
+			name = "Supporting Files";
+			path = MorseKeyboard;
+			sourceTree = "<group>";
+		};
+		DA0942D514D37EA600D814B9 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				DA0942D814D37EA600D814B9 /* MorseKeyboard.xcconfig */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		DA56DE5114F5583D004C2C35 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				DA56DE5214F558E7004C2C35 /* Morse.h */,
+				DA56DE5314F558E7004C2C35 /* Morse.m */,
+				DADEE09B14F6D3B900873452 /* MorseDemo.h */,
+				DADEE09C14F6D3B900873452 /* MorseDemo.m */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
+		DA62D24A15250CAE00EAB78C /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				DACF8B1014EC60C500B8DF89 /* Icon@2x.png */,
+				DACF8B1114EC60C500B8DF89 /* Icon-72.png */,
+				DA62D1DC1524DB2400EAB78C /* Icon-72@2x.png */,
+				DACF8B1214EC60C500B8DF89 /* Icon-Small@2x.png */,
+				DACF8B1314EC60C500B8DF89 /* Icon-Small-50.png */,
+				DACF8B1414EC60C500B8DF89 /* Icon-Small.png */,
+				DACF8B1514EC60C500B8DF89 /* Icon.png */,
+				DACF8B1614EC60C500B8DF89 /* iTunesArtwork.png */,
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
+		DA858D3114F484A800FF55E7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DA858D3214F484A800FF55E7 /* NavigationController.h */,
+				DA858D3314F484A800FF55E7 /* NavigationController.m */,
+				DA858D3414F484A800FF55E7 /* UI.h */,
+				DA858D3514F484A800FF55E7 /* UI.m */,
+			);
+			name = Components;
+			path = Classes/Components;
+			sourceTree = SOURCE_ROOT;
+		};
+		DA858D4814F486DD00FF55E7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				DA858D8614F4870D00FF55E7 /* toolbar_dark */,
+				DA56DE4F14F551A8004C2C35 /* button.png */,
+				DA0E4EF814F59BDA00932B0F /* button@2x.png */,
+				DA62D1D11524CFCF00EAB78C /* navbar.png */,
+				DA62D1D01524CFCF00EAB78C /* navbar@2x.png */,
+				DA56DE4C14F55036004C2C35 /* paper.png */,
+				DADEE10614F6E88300873452 /* send.png */,
+				DADEE10514F6E88300873452 /* send@2x.png */,
+				DA62D1D31524CFCF00EAB78C /* settings.png */,
+				DA62D1D21524CFCF00EAB78C /* settings@2x.png */,
+				DA62D1D51524CFCF00EAB78C /* toolbar.png */,
+				DA62D1D41524CFCF00EAB78C /* toolbar@2x.png */,
+				DA858D9014F4870D00FF55E7 /* webview-back.png */,
+				DA858D8F14F4870D00FF55E7 /* webview-back@2x.png */,
+				DA858D9214F4870D00FF55E7 /* webview-forward.png */,
+				DA858D9114F4870D00FF55E7 /* webview-forward@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		DA858D8614F4870D00FF55E7 /* toolbar_dark */ = {
+			isa = PBXGroup;
+			children = (
+				DA858D8714F4870D00FF55E7 /* back_normal.png */,
+				DA858D8814F4870D00FF55E7 /* back_normal@2x.png */,
+				DA858D8914F4870D00FF55E7 /* back_pressed.png */,
+				DA858D8A14F4870D00FF55E7 /* back_pressed@2x.png */,
+				DA858D8B14F4870D00FF55E7 /* standard_normal.png */,
+				DA858D8C14F4870D00FF55E7 /* standard_normal@2x.png */,
+				DA858D8D14F4870D00FF55E7 /* standard_pressed.png */,
+				DA858D8E14F4870D00FF55E7 /* standard_pressed@2x.png */,
+			);
+			name = toolbar_dark;
+			path = Images/toolbar_dark;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA09429A14D37D3400D814B9 /* MorseKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA0942B314D37D3400D814B9 /* Build configuration list for PBXNativeTarget "MorseKeyboard" */;
+			buildPhases = (
+				DA09429914D37D3400D814B9 /* Resources */,
+				DA09429714D37D3400D814B9 /* Sources */,
+				DA09429814D37D3400D814B9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MorseKeyboard;
+			productName = MorseKeyboard;
+			productReference = DA09429B14D37D3400D814B9 /* MorseKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA09429214D37D3400D814B9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Google Inc";
+			};
+			buildConfigurationList = DA09429514D37D3400D814B9 /* Build configuration list for PBXProject "MorseKeyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				English,
+			);
+			mainGroup = DA09429014D37D3400D814B9;
+			productRefGroup = DA09429C14D37D3400D814B9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA09429A14D37D3400D814B9 /* MorseKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA09429914D37D3400D814B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA6F28D414E1DE6F00883BDF /* Default@2x.png in Resources */,
+				DA6F28D614E1DE6F00883BDF /* Default.png in Resources */,
+				DACF8B1714EC60C500B8DF89 /* Icon@2x.png in Resources */,
+				DACF8B1914EC60C500B8DF89 /* Icon-72.png in Resources */,
+				DACF8B1B14EC60C500B8DF89 /* Icon-Small@2x.png in Resources */,
+				DACF8B1D14EC60C500B8DF89 /* Icon-Small-50.png in Resources */,
+				DACF8B1F14EC60C500B8DF89 /* Icon-Small.png in Resources */,
+				DACF8B2114EC60C500B8DF89 /* Icon.png in Resources */,
+				DACF8B2314EC60C500B8DF89 /* iTunesArtwork.png in Resources */,
+				DA858D9314F4870D00FF55E7 /* back_normal.png in Resources */,
+				DA858D9514F4870D00FF55E7 /* back_normal@2x.png in Resources */,
+				DA858D9714F4870D00FF55E7 /* back_pressed.png in Resources */,
+				DA858D9914F4870D00FF55E7 /* back_pressed@2x.png in Resources */,
+				DA858D9B14F4870D00FF55E7 /* standard_normal.png in Resources */,
+				DA858D9D14F4870D00FF55E7 /* standard_normal@2x.png in Resources */,
+				DA858D9F14F4870D00FF55E7 /* standard_pressed.png in Resources */,
+				DA858DA114F4870D00FF55E7 /* standard_pressed@2x.png in Resources */,
+				DA858DA314F4870D00FF55E7 /* webview-back@2x.png in Resources */,
+				DA858DA514F4870D00FF55E7 /* webview-back.png in Resources */,
+				DA858DA714F4870D00FF55E7 /* webview-forward@2x.png in Resources */,
+				DA858DA914F4870D00FF55E7 /* webview-forward.png in Resources */,
+				DA56DE4D14F55036004C2C35 /* paper.png in Resources */,
+				DA56DE5014F551A8004C2C35 /* button.png in Resources */,
+				DA0E4EF914F59BDA00932B0F /* button@2x.png in Resources */,
+				DA6EE8F914F59ECC00AC668C /* Default-Landscape~ipad.png in Resources */,
+				DA6EE8FA14F59ECC00AC668C /* Default-Portrait~ipad.png in Resources */,
+				DADEE10714F6E88300873452 /* send@2x.png in Resources */,
+				DADEE10814F6E88300873452 /* send.png in Resources */,
+				DA62D1D61524CFCF00EAB78C /* navbar@2x.png in Resources */,
+				DA62D1D71524CFCF00EAB78C /* navbar.png in Resources */,
+				DA62D1D81524CFCF00EAB78C /* settings@2x.png in Resources */,
+				DA62D1D91524CFCF00EAB78C /* settings.png in Resources */,
+				DA62D1DA1524CFCF00EAB78C /* toolbar@2x.png in Resources */,
+				DA62D1DB1524CFCF00EAB78C /* toolbar.png in Resources */,
+				DA62D1DD1524DB2400EAB78C /* Icon-72@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA09429714D37D3400D814B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA0942B814D37DBF00D814B9 /* AppDelegate.m in Sources */,
+				DA0942CB14D37E1100D814B9 /* main.m in Sources */,
+				DA858D3814F484A800FF55E7 /* NavigationController.m in Sources */,
+				DA858D3A14F484A800FF55E7 /* UI.m in Sources */,
+				DA858D4614F4867600FF55E7 /* MainViewController.m in Sources */,
+				DA56DE5414F558E7004C2C35 /* Morse.m in Sources */,
+				DADEE09D14F6D3B900873452 /* MorseDemo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DA0942B114D37D3400D814B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		DA0942B214D37D3400D814B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		DA0942B414D37D3400D814B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA0942D814D37EA600D814B9 /* MorseKeyboard.xcconfig */;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		DA0942B514D37D3400D814B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA0942D814D37EA600D814B9 /* MorseKeyboard.xcconfig */;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA09429514D37D3400D814B9 /* Build configuration list for PBXProject "MorseKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA0942B114D37D3400D814B9 /* Debug */,
+				DA0942B214D37D3400D814B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA0942B314D37D3400D814B9 /* Build configuration list for PBXNativeTarget "MorseKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA0942B414D37D3400D814B9 /* Debug */,
+				DA0942B514D37D3400D814B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA09429214D37D3400D814B9 /* Project object */;
+}

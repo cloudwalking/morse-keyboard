@@ -1,0 +1,31 @@
+//
+//  MorseKeyboard.xcconfig
+//  MorseKeyboard
+//
+//  Created by David Patierno on 2/21/12.
+//  Copyright 2012 Google Inc. All rights reserved.
+//
+
+ARCHS = armv6 $(ARCHS_STANDARD_32_BIT)
+ARCHS[sdk=iphonesimulator*] = i386
+ARCHS[sdk=macosx*] = i386 ppc
+ARCHS[sdk=iphoneos*] = armv6 $(ARCHS_STANDARD_32_BIT)
+
+PRODUCT_NAME = MorseKeyboard
+DISPLAY_NAME = Morse
+INFOPLIST_FILE = Resources/MorseKeyboard-Info.plist
+TARGETED_DEVICE_FAMILY = 1,2
+ALWAYS_SEARCH_USER_PATHS = NO
+PREBINDING = NO
+
+IPHONEOS_DEPLOYMENT_TARGET = 4.0
+
+GCC_C_LANGUAGE_STANDARD = c99
+GCC_GENERATE_DEBUGGING_SYMBOLS = YES
+GCC_WARN_ABOUT_RETURN_TYPE = YES
+GCC_WARN_UNUSED_VARIABLE = YES
+GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES
+GCC_VERSION = com.apple.compilers.llvmgcc42
+GCC_VERSION[sdk=iphone*4.*] = com.apple.compilers.llvmgcc42
+GCC_VERSION[sdk=iphone*5.*] = com.apple.compilers.llvm.clang.1_0
+SDKROOT=iphoneos
