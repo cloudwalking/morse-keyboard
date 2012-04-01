@@ -22,7 +22,6 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -244,7 +243,6 @@ public class CandidateView extends View {
     
     public void setSuggestions(List<String> suggestions, boolean completions,
             boolean typedWordValid) {
-    	Log.v("rgam", "CandidateView setSuggestions()");
         clear();
         if (suggestions != null) {
             mSuggestions = new ArrayList<String>(suggestions);
@@ -267,7 +265,6 @@ public class CandidateView extends View {
     
     @Override
     public boolean onTouchEvent(MotionEvent me) {
-    	Log.v("rgam", "CandidateView onTouchEvent()");
         if (mGestureDetector.onTouchEvent(me)) {
             return true;
         }
@@ -312,7 +309,6 @@ public class CandidateView extends View {
      * @param x
      */
     public void takeSuggestionAt(float x) {
-    	Log.v("rgam", "CandidateView takeSuggestionAt()");
         mTouchX = (int) x;
         // To detect candidate
         onDraw(null);

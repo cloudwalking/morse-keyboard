@@ -18,8 +18,8 @@ package com.rgam.morsekeyboard;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,6 +52,10 @@ public class TryFragment extends Fragment {
     private StringBuilder textBuilder;
     
     private SharedPreferences settings;
+    
+    private Handler morseHandler;
+    private final int DOT_LENGTH_MS = 300;
+    private final int LETTER_MULTIPLIER = 3;
     
 	public static TryFragment newInstance() {
 		return new TryFragment();
@@ -119,23 +123,17 @@ public class TryFragment extends Fragment {
 		if(!settings.getBoolean(Constants.GTAP_PREDICTIVE_MODE, false)) {
 			// Space typed, commit what we have.
 			if (c == ' ') {
+				invalidateLetterTimer();
 				if (textBuilder.length() == 0) {
 					// If the pending string is empty, the user wants a real space added.
 					textBuilder.append(c);
-				} else {
-					// Pending string isn't empty, so just commit the Morse Code.
-					Character morseCharacter = Morse.characterFromCode(textBuilder.toString());
-	    			if (morseCharacter != null) {
-	    				String morseString = String.valueOf(morseCharacter.charValue());
-	    				textBuilder = new StringBuilder(morseString);
-		        	} else {
-		        		textBuilder.setLength(0);
-		        	}
 				}
+				
 				commitTyped();
 			} else {
 				textBuilder.append(c);
 				updateCandidate();
+				beginLetterTimer();
 			}
 		} else {
 			/* Use mod so we can slow down typing (more realistic). */
@@ -176,8 +174,41 @@ public class TryFragment extends Fragment {
 	}
 	
 	private void commitTyped() {
+		if (!settings.getBoolean(Constants.GTAP_PREDICTIVE_MODE, false) && !textBuilder.toString().equals(" ")) {
+			Character morseCharacter = Morse.characterFromCode(textBuilder.toString());
+			if (morseCharacter != null) {
+				String morseString = String.valueOf(morseCharacter.charValue());
+				textBuilder = new StringBuilder(morseString);
+	    	} else {
+	    		textBuilder.setLength(0);
+	    	}
+		}
+		
     	text.append(textBuilder);
     	textBuilder.setLength(0);
     	updateCandidate();
     }
+	
+	private void beginLetterTimer() {
+    	invalidateLetterTimer();
+
+    	int interval = DOT_LENGTH_MS * LETTER_MULTIPLIER;
+    	
+    	morseHandler = new Handler();
+    	morseHandler.postDelayed(insertLetterTask, interval);
+    }
+
+    private void invalidateLetterTimer() {
+    	if (morseHandler != null) {
+    		morseHandler.removeCallbacks(insertLetterTask);
+    	}
+    }
+
+    private Runnable insertLetterTask = new Runnable() {
+    	public void run() {
+    		if (textBuilder.length() > 0) {
+    			commitTyped();
+    		}
+    	}
+    };
 }

@@ -21,7 +21,6 @@ import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.inputmethodservice.Keyboard.Key;
 import android.util.AttributeSet;
-import android.util.Log;
 
 public class LatinKeyboardView extends KeyboardView {
 
@@ -39,7 +38,6 @@ public class LatinKeyboardView extends KeyboardView {
 
     @Override
     protected boolean onLongPress(Key key) {
-    	Log.v("rgam", "LatinKeyboardView onLongPress()");
         if (key.codes[0] == Keyboard.KEYCODE_CANCEL) {
             getOnKeyboardActionListener().onKey(KEYCODE_OPTIONS, null);
             return true;

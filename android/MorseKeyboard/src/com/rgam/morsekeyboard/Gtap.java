@@ -22,7 +22,6 @@ import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.os.Handler;
 import android.text.method.MetaKeyKeyListener;
-import android.util.Log;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
 import android.view.View;
@@ -146,7 +145,6 @@ public class Gtap extends InputMethodService
      * about the target of our edits.
      */
     @Override public void onStartInput(EditorInfo attribute, boolean restarting) {
-    	Log.v("rgam", "onStartInput()");
         super.onStartInput(attribute, restarting);
 
         // predictiveEnabled = settings.getBoolean(Constants.GTAP_PREDICTIVE_MODE, false);
@@ -228,7 +226,6 @@ public class Gtap extends InputMethodService
      * this to reset our state.
      */
     @Override public void onFinishInput() {
-    	Log.v("rgam", "onFinishInput()");
         super.onFinishInput();
 
         // Clear current composing text and candidates.
@@ -248,7 +245,6 @@ public class Gtap extends InputMethodService
     }
 
     @Override public void onStartInputView(EditorInfo attribute, boolean restarting) {
-    	Log.v("rgam", "onStartInputView()");
         super.onStartInputView(attribute, restarting);
         // Apply the selected keyboard to the input view.
         mInputView.setKeyboard(mCurKeyboard);
@@ -261,7 +257,6 @@ public class Gtap extends InputMethodService
     @Override public void onUpdateSelection(int oldSelStart, int oldSelEnd,
             int newSelStart, int newSelEnd,
             int candidatesStart, int candidatesEnd) {
-    	Log.v("rgam", "onUpdateSelection()");
         super.onUpdateSelection(oldSelStart, oldSelEnd, newSelStart, newSelEnd,
                 candidatesStart, candidatesEnd);
 
@@ -285,7 +280,6 @@ public class Gtap extends InputMethodService
      * in that situation.
      */
     @Override public void onDisplayCompletions(CompletionInfo[] completions) {
-    	Log.v("rgam", "onDisplayCompletions()");
         if (mCompletionOn) {
             mCompletions = completions;
             if (completions == null) {
@@ -303,7 +297,6 @@ public class Gtap extends InputMethodService
     }
     
     public void predictiveModeChanged() {
-    	Log.v("rgam", "PREDICTIVE MODE CHANGED!!");
     }
 
     /**
@@ -312,7 +305,6 @@ public class Gtap extends InputMethodService
      * PROCESS_HARD_KEYS option.
      */
     private boolean translateKeyDown(int keyCode, KeyEvent event) {
-    	Log.v("rgam", "translateKeyDown()");
         mMetaState = MetaKeyKeyListener.handleKeyDown(mMetaState,
                 keyCode, event);
         int c = event.getUnicodeChar(MetaKeyKeyListener.getMetaState(mMetaState));
@@ -350,7 +342,6 @@ public class Gtap extends InputMethodService
      * continue to the app.
      */
     @Override public boolean onKeyDown(int keyCode, KeyEvent event) {
-    	Log.v("rgam", "onKeyDown()");
         switch (keyCode) {
             case KeyEvent.KEYCODE_BACK:
                 // The InputMethodService already takes care of the back
@@ -398,7 +389,6 @@ public class Gtap extends InputMethodService
      * continue to the app.
      */
     @Override public boolean onKeyUp(int keyCode, KeyEvent event) {
-    	Log.v("rgam", "onKeyUp()");
         // If we want to do transformations on text being entered with a hard
         // keyboard, we need to process the up events to update the meta key
         // state we are tracking.
@@ -447,7 +437,6 @@ public class Gtap extends InputMethodService
      * editor state.
      */
     private void updateShiftKeyState(EditorInfo attr) {
-    	Log.v("rgam", "updateShiftKeyState()");
         if (attr != null 
                 && mInputView != null && mMorseKeyboard == mInputView.getKeyboard()) {
             int caps = 0;
@@ -463,7 +452,6 @@ public class Gtap extends InputMethodService
      * Helper to send a key down / key up pair to the current editor.
      */
     private void keyDownUp(int keyEventCode) {
-    	Log.v("rgam", "keyDownUp()");
         getCurrentInputConnection().sendKeyEvent(
                 new KeyEvent(KeyEvent.ACTION_DOWN, keyEventCode));
         getCurrentInputConnection().sendKeyEvent(
@@ -476,9 +464,9 @@ public class Gtap extends InputMethodService
     	predictiveEnabled = settings.getBoolean(Constants.GTAP_PREDICTIVE_MODE, false);
     	
     	if (primaryCode == KEYCODE_SPACE) {
-        	Log.v("rgam", ">>> space key hit");
             if (mComposing.length() > 0) {
                 commitTyped(getCurrentInputConnection());
+                beginLetterAndWordTimers();
             } else {
             	// Nothing typed, commit a space.
             	commitTyped(getCurrentInputConnection(), " ");
@@ -554,8 +542,6 @@ public class Gtap extends InputMethodService
 
     private int tapCounter = 0;
     private void handleCharacter(int primaryCode, int[] keyCodes) {
-    	Log.v("rgam", "handleCharacter()");
-    	
     	if (predictiveEnabled) {
     		/*
     		// Each tap is one word
@@ -585,10 +571,11 @@ public class Gtap extends InputMethodService
     		mComposing.append((char) primaryCode); 
     		updateCandidates();
     	}
+    	
+    	beginLetterAndWordTimers();
     }
 
     private void handleClose() {
-    	Log.v("rgam", "handleClose()");
         commitTyped(getCurrentInputConnection());
         requestHideSelf(0);
         mInputView.closing();
@@ -647,28 +634,17 @@ public class Gtap extends InputMethodService
     public void onRelease(int primaryCode) {
     }
 
-    private void commitWordSeparator() {
-    	mComposing.setLength(0);
-		commitTyped(getCurrentInputConnection(), " ");
-    }
-
     private void beginLetterAndWordTimers() {
-    	
+    	invalidateLetterAndWordTimers();
     	morseHandler = new Handler();
 
     	int interval = predictiveEnabled ? 0 : DOT_LENGTH_MS * LETTER_MULTIPLIER;
     	morseHandler.postDelayed(insertLetterTask, interval);
-    	
-    	if (!predictiveEnabled) {
-    		interval = DOT_LENGTH_MS * WORD_MULTIPLIER;
-    		morseHandler.postDelayed(insertSeparatorTask, interval);
-    	}
     }
 
     private void invalidateLetterAndWordTimers() {
     	if (morseHandler != null) {
     		morseHandler.removeCallbacks(insertLetterTask);
-    		morseHandler.removeCallbacks(insertSeparatorTask);
     	}
     }
 
@@ -677,12 +653,6 @@ public class Gtap extends InputMethodService
     		if (mComposing.length() > 0) {
     			commitTyped(getCurrentInputConnection());
     		}
-    	}
-    };
-
-    private Runnable insertSeparatorTask = new Runnable() {
-    	public void run() {
-    		commitWordSeparator();
     	}
     };
 }
