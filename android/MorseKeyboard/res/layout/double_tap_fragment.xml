@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* 
+** Copyright 2012 Google Inc. All Rights Reserved.
+** 
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+** 
+**   http://www.apache.org/licenses/LICENSE-2.0
+** 
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="top" >
+      <LinearLayout
+        android:orientation="horizontal"
+        android:background="#252625"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dip"
+        android:gravity="bottom" >
+        <Button
+            android:id="@+id/top_dot"
+            android:layout_width="0dip"
+            android:layout_height="100dip"
+            android:layout_marginRight="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/gtap_button"
+            android:textColor="#fff"
+            android:text="•" />
+        <Button
+            android:id="@+id/top_dash"
+            android:layout_width="0dip"
+            android:layout_height="100dip"
+            android:layout_weight="1"
+            android:background="@drawable/gtap_button"
+            android:textColor="#fff"
+            android:text="—" />
+      </LinearLayout>
+      <LinearLayout
+        android:orientation="horizontal"
+        android:background="#252625"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dip" >
+        <Button
+            android:id="@+id/top_space"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_marginRight="1dip"
+            android:layout_marginLeft="1dip"
+            android:layout_weight="6"
+            android:drawableTop="@drawable/sym_fake_keyboard_space"
+            android:background="@drawable/gtap_button" />
+        <Button
+            android:id="@+id/top_delete"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_weight="2"
+            android:drawableTop="@drawable/sym_fake_keyboard_delete"
+            android:background="@drawable/gtap_button" />
+      </LinearLayout>
+      <EditText
+          android:id="@+id/top_text"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:editable="false"
+          android:lines="1" />
+   </LinearLayout>
+   
+   <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:gravity="bottom" >
+      <EditText
+          android:id="@+id/bottom_text"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:editable="false"
+          android:lines="1" />
+      <LinearLayout
+        android:orientation="horizontal"
+        android:background="#252625"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dip"
+        android:gravity="bottom" >
+        <Button
+            android:id="@+id/bottom_dot"
+            android:layout_width="0dip"
+            android:layout_height="100dip"
+            android:layout_marginRight="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/gtap_button"
+            android:textColor="#fff"
+            android:text="•" />
+        <Button
+            android:id="@+id/bottom_dash"
+            android:layout_width="0dip"
+            android:layout_height="100dip"
+            android:layout_weight="1"
+            android:background="@drawable/gtap_button"
+            android:textColor="#fff"
+            android:text="—" />
+      </LinearLayout>
+      <LinearLayout
+        android:orientation="horizontal"
+        android:background="#252625"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        <Button
+            android:id="@+id/bottom_space"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_marginRight="1dip"
+            android:layout_marginLeft="1dip"
+            android:layout_weight="6"
+            android:drawableTop="@drawable/sym_fake_keyboard_space"
+            android:background="@drawable/gtap_button" />
+        <Button
+            android:id="@+id/bottom_delete"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_weight="2"
+            android:drawableTop="@drawable/sym_fake_keyboard_delete"
+            android:background="@drawable/gtap_button" />
+      </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

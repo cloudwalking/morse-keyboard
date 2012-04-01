@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* 
+** Copyright 2012 Google Inc. All Rights Reserved.
+** 
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+** 
+**   http://www.apache.org/licenses/LICENSE-2.0
+** 
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Title for keyboard in settings  -->
+    <string name="ime_name">Morse Keyboard</string>
+
+    <!-- Symbols that are commonly considered word separators in this language -->
+    <string name="word_separators">\u0020,;:!?\n()[]*&amp;@{}/&lt;&gt;_+=|&quot;</string>
+    
+    <!-- Labels on soft keys -->
+    <string name="label_go_key">Go</string>
+    <string name="label_next_key">Next</string>
+    <string name="label_send_key">Send</string>
+    
+    <string name="settingsIntentButton">Enable Morse Keyboard in Settings</string>
+    <string name="predictiveButtonEnabled">Disable Predictive Mode</string>
+    <string name="predictiveButtonDisabled">Enable Predictive Mode</string>
+
+    <string name="tryItOutText">Try it out</string>
+    
+    <string name="description">Type faster and with confidence.</string>
+    
+    <string name="apache">April Fool\'s from the Gmail team!\n\nThis application uses ViewPagerIndicator, which is used under the terms and conditions of the Apache 2.0 license:\nCopyright 2011 Patrik Åkerfeldt\nCopyright 2011 Francisco Figueiredo Jr.\nCopyright 2011 Jake Wharton\n\nThis program is Copyright 2012 Google Inc. All Rights Reserved.\n\nLicensed under the Apache License, Version 2.0 (the "License"); you may not use this program except in compliance with the License. You may obtain a copy of the License at\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nUnless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.</string>
+
+    <string name="install_instructions">1. Enable Morse Keyboard in System Settings.\n\n2. When you select a text field in Gmail, change your keyboard by going to the <b>notifications bar</b>, choose <b>Select Input Method</b>, and then select Morse Keyboard.\n\n You can disable the keyboard from the notifications bar.</string>
+</resources>

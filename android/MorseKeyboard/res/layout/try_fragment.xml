@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/* 
+** Copyright 2012 Google Inc. All Rights Reserved.
+** 
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+** 
+**   http://www.apache.org/licenses/LICENSE-2.0
+** 
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="10dip" >
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:gravity="top"
+        android:id="@+id/try_description" >
+      <TextView 
+          android:text="@string/ime_name"
+          style="@style/h1" />
+	    <TextView 
+	        android:text="@string/description"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" />
+	  </LinearLayout>
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/try_keyboard" >
+	    <TextView 
+	        android:id="@+id/candidate_view"
+	        android:paddingTop="0dip"
+	        android:paddingBottom="3dip"
+	        android:paddingLeft="5dip"
+          android:layout_width="fill_parent"
+          android:layout_height="22dip"
+          android:background="@color/candidate_background"
+          android:textSize="@dimen/candidate_font_height"
+          android:textStyle="bold"
+          android:textColor="@color/candidate_recommended" />
+      <LinearLayout
+        android:orientation="horizontal"
+        android:background="#252625"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="3dip"
+        android:gravity="bottom" >
+        <Button
+            android:id="@+id/dot"
+            android:layout_width="0dip"
+            android:layout_height="100dip"
+            android:layout_marginRight="1dip"
+            android:layout_weight="1"
+            android:background="@drawable/gtap_button"
+            android:textColor="#fff"
+            android:text="•" />
+        <Button
+            android:id="@+id/dash"
+            android:layout_width="0dip"
+            android:layout_height="100dip"
+            android:layout_weight="1"
+            android:background="@drawable/gtap_button"
+            android:textColor="#fff"
+            android:text="—" />
+      </LinearLayout>
+      <LinearLayout
+        android:orientation="horizontal"
+        android:background="#252625"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom" >
+        <Button
+            android:id="@+id/space"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_marginRight="1dip"
+            android:layout_marginLeft="1dip"
+            android:layout_weight="6"
+            android:drawableTop="@drawable/sym_fake_keyboard_space"
+            android:background="@drawable/gtap_button" />
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="0dip"
+            android:layout_height="50dip"
+            android:layout_weight="2"
+            android:drawableTop="@drawable/sym_fake_keyboard_delete"
+            android:background="@drawable/gtap_button" />
+      </LinearLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/try_description"
+        android:layout_above="@id/try_keyboard"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:gravity="center"
+        android:id="@+id/try_text" >
+      <EditText
+          android:id="@+id/text"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:gravity="top"
+          android:lines="6"
+          android:hint="@string/tryItOutText"
+          android:editable="false" />
+    </LinearLayout>
+
+</RelativeLayout>
