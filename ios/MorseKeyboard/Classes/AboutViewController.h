@@ -1,8 +1,8 @@
 //
-//  MainViewController.h
+//  AboutViewController.h
 //  MorseKeyboard
 //
-//  Created by David Patierno on 2/21/12.
+//  Created by David Patierno on 4/3/12.
 //  Copyright (c) 2012 Google Inc. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,22 +18,8 @@
 //  limitations under the License.
 //
 
-#import <MessageUI/MessageUI.h>
 #import <UIKit/UIKit.h>
 
-#import "Morse.h"
+@interface AboutViewController : UIViewController
 
-// Displays a text view and a button. Communicates with Morse to handle user
-// input and display translated output.
-@interface MainViewController : UIViewController
-    <MFMailComposeViewControllerDelegate,
-     MFMessageComposeViewControllerDelegate,
-     MorseDelegate,
-     UIActionSheetDelegate>
-@property(nonatomic, retain) Morse* morse;
-@property(nonatomic, retain) UITextView* textView;
-@property(nonatomic, retain) UIButton* singleButton;
-
-- (void)sendEmail;
-- (void)sendSMS;
 @end

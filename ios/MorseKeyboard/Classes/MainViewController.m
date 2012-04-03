@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Google Inc. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
-//  you may not use this file except in compliance with the License.
+//  You may not use this file except in compliance with the License.
 //  You may obtain a copy of the License at
 //
 //    http://www.apache.org/licenses/LICENSE-2.0
@@ -22,8 +22,10 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-#import "UI.h"
+#import "AboutViewController.h"
 #import "MorseDemo.h"
+#import "NavigationController.h"
+#import "UI.h"
 
 typedef enum {
   SheetTagSettings = 1,
@@ -145,10 +147,17 @@ typedef enum {
                          cancelButtonTitle:@"Cancel"
                     destructiveButtonTitle:@"Clear"
                          otherButtonTitles:title,
+                                           @"About Morse Keyboard",
                                            nil]
           autorelease];
   sheet.tag = SheetTagSettings;
-  [sheet showInView:self.view];
+
+  if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+    [sheet showFromBarButtonItem:self.navigationItem.leftBarButtonItem
+                        animated:YES];
+  } else {
+    [sheet showInView:self.view];
+  }
 }
 
 - (void)sendMessage {
@@ -167,7 +176,13 @@ typedef enum {
                                             nil]
            autorelease];
   sheet.tag = SheetTagMessage;
-  [sheet showInView:self.view];
+
+  if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+    [sheet showFromBarButtonItem:self.navigationItem.rightBarButtonItem
+                        animated:YES];
+  } else {
+    [sheet showInView:self.view];
+  }
 }
 
 - (void)sendEmail {
@@ -214,6 +229,14 @@ typedef enum {
       }
 
       self.morse = [[[MorseClass alloc] initWithDelegate:self] autorelease];
+    } else if (buttonIndex == 2) {
+      AboutViewController* vc =
+      [[[AboutViewController alloc] init] autorelease];
+      NavigationController* nvc =
+          [[[NavigationController alloc] initWithRootViewController:vc]
+              autorelease];
+      [self presentModalViewController:nvc animated:YES];
+      return;
     }
 
     [morse_ reset];

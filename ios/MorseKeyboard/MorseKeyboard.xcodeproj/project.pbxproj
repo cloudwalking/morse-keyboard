@@ -24,6 +24,7 @@
 		DA6EE8FA14F59ECC00AC668C /* Default-Portrait~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6EE8F814F59ECC00AC668C /* Default-Portrait~ipad.png */; };
 		DA6F28D414E1DE6F00883BDF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6F28D214E1DE6F00883BDF /* Default@2x.png */; };
 		DA6F28D614E1DE6F00883BDF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DA6F28D314E1DE6F00883BDF /* Default.png */; };
+		DA85355B152B9D8A000B1B1F /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA85355A152B9D8A000B1B1F /* AboutViewController.m */; };
 		DA858D3814F484A800FF55E7 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA858D3314F484A800FF55E7 /* NavigationController.m */; };
 		DA858D3A14F484A800FF55E7 /* UI.m in Sources */ = {isa = PBXBuildFile; fileRef = DA858D3514F484A800FF55E7 /* UI.m */; };
 		DA858D4014F4855B00FF55E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA858D3E14F4855B00FF55E7 /* Foundation.framework */; };
@@ -79,6 +80,8 @@
 		DA6EE8F814F59ECC00AC668C /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		DA6F28D214E1DE6F00883BDF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DA6F28D314E1DE6F00883BDF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		DA853559152B9D8A000B1B1F /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = Classes/AboutViewController.h; sourceTree = SOURCE_ROOT; };
+		DA85355A152B9D8A000B1B1F /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = Classes/AboutViewController.m; sourceTree = SOURCE_ROOT; };
 		DA858D3214F484A800FF55E7 /* NavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
 		DA858D3314F484A800FF55E7 /* NavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		DA858D3414F484A800FF55E7 /* UI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UI.h; sourceTree = "<group>"; };
@@ -165,6 +168,8 @@
 			children = (
 				DA858D3114F484A800FF55E7 /* Components */,
 				DA56DE5114F5583D004C2C35 /* Objects */,
+				DA853559152B9D8A000B1B1F /* AboutViewController.h */,
+				DA85355A152B9D8A000B1B1F /* AboutViewController.m */,
 				DA858D4414F4867600FF55E7 /* MainViewController.h */,
 				DA858D4514F4867600FF55E7 /* MainViewController.m */,
 				DA0942B614D37DBF00D814B9 /* AppDelegate.h */,
@@ -387,6 +392,7 @@
 				DA858D4614F4867600FF55E7 /* MainViewController.m in Sources */,
 				DA56DE5414F558E7004C2C35 /* Morse.m in Sources */,
 				DADEE09D14F6D3B900873452 /* MorseDemo.m in Sources */,
+				DA85355B152B9D8A000B1B1F /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
